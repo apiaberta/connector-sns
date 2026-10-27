@@ -1,0 +1,289 @@
+{
+  "urgencias": [
+    {
+      "tempo": "2026-05",
+      "regiao": "Região de Saúde LVT",
+      "instituicao": "Unidade Local de Saúde da Lezíria, EPE",
+      "localizacao_geografica": { "lon": -8.715083, "lat": 39.232503 },
+      "urgencias_geral": 1000,
+      "urgencias_pediatricas": 200,
+      "urgencia_obstetricia": 50,
+      "urgencia_psiquiatrica": 30,
+      "total_urgencias": 1280,
+      "periodoformat2": "ignored"
+    },
+    {
+      "tempo": "2026-06",
+      "regiao": "Região de Saúde do Centro",
+      "instituicao": "Centro Hospitalar Tondela-Viseu, EPE",
+      "localizacao_geografica": { "lon": -8.0827433, "lat": 40.516364 },
+      "urgencias_geral": 800,
+      "urgencias_pediatricas": 150,
+      "urgencia_obstetricia": 40,
+      "urgencia_psiquiatrica": 20,
+      "total_urgencias": 1010
+    },
+    {
+      "tempo": "2026-07",
+      "regiao": "Região de Saúde LVT",
+      "instituicao": "Unidade Local de Saúde de São José, EPE",
+      "localizacao_geografica": { "lon": -9.142, "lat": 38.722 },
+      "urgencias_geral": 2100,
+      "urgencias_pediatricas": 400,
+      "urgencia_obstetricia": 90,
+      "urgencia_psiquiatrica": 70,
+      "total_urgencias": 2660
+    }
+  ],
+  "urgencias_triagem": [
+    {
+      "tempo": "2026-07",
+      "regiao": "Região de Saúde LVT",
+      "instituicao": "Unidade Local de Saúde da Lezíria, EPE",
+      "localizacao_geografica": { "lon": -8.715083, "lat": 39.232503 },
+      "no_de_atendimentos_em_urgencia_su_triagem_manchester_vermelha": 278,
+      "no_de_atendimentos_em_urgencia_su_triagem_manchester_laranja": 8758,
+      "no_de_atendimentos_em_urgencia_su_triagem_manchester_amarela": 35888,
+      "no_de_atendimentos_em_urgencia_su_triagem_manchester_verde": 12110,
+      "no_de_atendimentos_em_urgencia_su_triagem_manchester_azul": 933,
+      "no_de_atendimentos_em_urgencia_su_triagem_manchester_branca": 780,
+      "no_de_atendimentos_em_sem_triagem_manchester": 123
+    },
+    {
+      "tempo": "2026-06",
+      "regiao": "Região de Saúde do Centro",
+      "instituicao": "Centro Hospitalar Tondela-Viseu, EPE",
+      "localizacao_geografica": { "lon": -8.0827433, "lat": 40.516364 },
+      "no_de_atendimentos_em_urgencia_su_triagem_manchester_vermelha": 100,
+      "no_de_atendimentos_em_urgencia_su_triagem_manchester_laranja": 2000,
+      "no_de_atendimentos_em_urgencia_su_triagem_manchester_amarela": 8000,
+      "no_de_atendimentos_em_urgencia_su_triagem_manchester_verde": 4000,
+      "no_de_atendimentos_em_urgencia_su_triagem_manchester_azul": 300,
+      "no_de_atendimentos_em_urgencia_su_triagem_manchester_branca": 50,
+      "no_de_atendimentos_em_sem_triagem_manchester": 10
+    },
+    {
+      "tempo": "2026-05",
+      "regiao": "Região de Saúde LVT",
+      "instituicao": "Unidade Local de Saúde de São José, EPE",
+      "localizacao_geografica": { "lon": -9.142, "lat": 38.722 },
+      "no_de_atendimentos_em_urgencia_su_triagem_manchester_vermelha": 400,
+      "no_de_atendimentos_em_urgencia_su_triagem_manchester_laranja": 9000,
+      "no_de_atendimentos_em_urgencia_su_triagem_manchester_amarela": 20000,
+      "no_de_atendimentos_em_urgencia_su_triagem_manchester_verde": 7000,
+      "no_de_atendimentos_em_urgencia_su_triagem_manchester_azul": 500,
+      "no_de_atendimentos_em_urgencia_su_triagem_manchester_branca": 100,
+      "no_de_atendimentos_em_sem_triagem_manchester": 80
+    }
+  ],
+  "cirurgia_tmrg": [
+    {
+      "tempo": "2026-05",
+      "regiao": "Região de Saúde LVT",
+      "instituicao": "Unidade Local de Saúde da Lezíria, EPE",
+      "localizacao_geografica": { "lon": -8.715083, "lat": 39.232503 },
+      "no_de_doentes_inscritos_dentro_do_tmrg_sigic": 90,
+      "no_de_doentes_inscritos_sigic": 100,
+      "de_inscritos_em_lic_dentro_do_tmrg": 90.0
+    },
+    {
+      "tempo": "2026-05",
+      "regiao": "Região de Saúde do Centro",
+      "instituicao": "Centro Hospitalar Tondela-Viseu, EPE",
+      "localizacao_geografica": { "lon": -8.0827433, "lat": 40.516364 },
+      "no_de_doentes_inscritos_dentro_do_tmrg_sigic": 10,
+      "no_de_doentes_inscritos_sigic": 1000,
+      "de_inscritos_em_lic_dentro_do_tmrg": 1.0
+    },
+    {
+      "tempo": "2026-06",
+      "regiao": "Região de Saúde LVT",
+      "instituicao": "Unidade Local de Saúde de São José, EPE",
+      "localizacao_geografica": { "lon": -9.142, "lat": 38.722 },
+      "no_de_doentes_inscritos_dentro_do_tmrg_sigic": 3330,
+      "no_de_doentes_inscritos_sigic": 4094,
+      "de_inscritos_em_lic_dentro_do_tmrg": 81.3
+    }
+  ],
+  "cirurgia_tmrg_onco": [
+    {
+      "tempo": "2026-05",
+      "regiao": "Região de Saúde LVT",
+      "instituicao": "Unidade Local de Saúde da Lezíria, EPE",
+      "localizacao_geografica": { "lon": -8.715083, "lat": 39.232503 },
+      "no_de_doentes_inscritos_dentro_do_tmrg_sigic": 40,
+      "no_de_doentes_inscritos_sigic": 50,
+      "de_inscritos_em_lic_dentro_do_tmrg": 80.0
+    },
+    {
+      "tempo": "2026-06",
+      "regiao": "Região de Saúde do Centro",
+      "instituicao": "Centro Hospitalar Tondela-Viseu, EPE",
+      "localizacao_geografica": { "lon": -8.0827433, "lat": 40.516364 },
+      "no_de_doentes_inscritos_dentro_do_tmrg_sigic": 20,
+      "no_de_doentes_inscritos_sigic": 25,
+      "de_inscritos_em_lic_dentro_do_tmrg": 80.0
+    },
+    {
+      "tempo": "2026-07",
+      "regiao": "Região de Saúde LVT",
+      "instituicao": "Unidade Local de Saúde de São José, EPE",
+      "localizacao_geografica": { "lon": -9.142, "lat": 38.722 },
+      "no_de_doentes_inscritos_dentro_do_tmrg_sigic": 100,
+      "no_de_doentes_inscritos_sigic": 200,
+      "de_inscritos_em_lic_dentro_do_tmrg": 50.0
+    }
+  ],
+  "consultas_hospitalares": [
+    {
+      "tempo": "2026-05",
+      "regiao": "Região de Saúde LVT",
+      "instituicao": "Unidade Local de Saúde da Lezíria, EPE",
+      "localizacao_geografica": { "lon": -8.715083, "lat": 39.232503 },
+      "no_de_consultas_medicas_total": 5000,
+      "no_de_primeiras_consultas": 1200,
+      "no_de_consultas_subsequentes": 3800
+    },
+    {
+      "tempo": "2026-06",
+      "regiao": "Região de Saúde do Centro",
+      "instituicao": "Centro Hospitalar Tondela-Viseu, EPE",
+      "localizacao_geografica": { "lon": -8.0827433, "lat": 40.516364 },
+      "no_de_consultas_medicas_total": 3000,
+      "no_de_primeiras_consultas": 800,
+      "no_de_consultas_subsequentes": 2200
+    },
+    {
+      "tempo": "2026-07",
+      "regiao": "Região de Saúde LVT",
+      "instituicao": "Unidade Local de Saúde de São José, EPE",
+      "localizacao_geografica": { "lon": -9.142, "lat": 38.722 },
+      "no_de_consultas_medicas_total": 9000,
+      "no_de_primeiras_consultas": 2500,
+      "no_de_consultas_subsequentes": 6500
+    }
+  ],
+  "consultas_tmrg": [
+    {
+      "tempo": "2026-05",
+      "regiao": "Região de Saúde LVT",
+      "instituicao": "Unidade Local de Saúde da Lezíria, EPE",
+      "localizacao_geografica": { "lon": -8.715083, "lat": 39.232503 },
+      "no_primeiras_ce_prestadas_dentro_do_tmrg": 90,
+      "no_primeiras_ce_realizadas_com_registo_no_cth": 100,
+      "1as_consultas_realizadas_em_tempo_adequado": 90.0
+    },
+    {
+      "tempo": "2026-05",
+      "regiao": "Região de Saúde do Centro",
+      "instituicao": "Centro Hospitalar Tondela-Viseu, EPE",
+      "localizacao_geografica": { "lon": -8.0827433, "lat": 40.516364 },
+      "no_primeiras_ce_prestadas_dentro_do_tmrg": 10,
+      "no_primeiras_ce_realizadas_com_registo_no_cth": 1000,
+      "1as_consultas_realizadas_em_tempo_adequado": 1.0
+    },
+    {
+      "tempo": "2026-06",
+      "regiao": "Região de Saúde LVT",
+      "instituicao": "Unidade Local de Saúde de São José, EPE",
+      "localizacao_geografica": { "lon": -9.142, "lat": 38.722 },
+      "no_primeiras_ce_prestadas_dentro_do_tmrg": 750,
+      "no_primeiras_ce_realizadas_com_registo_no_cth": 1000,
+      "1as_consultas_realizadas_em_tempo_adequado": 75.0
+    }
+  ],
+  "consultas_csp": [
+    {
+      "tempo": "2026-05",
+      "regiao": "Região de Saúde do Alentejo",
+      "entidade": "ACES Alentejo Central",
+      "ponto_ou_localizacao_geografica": { "lon": -7.907, "lat": 38.567 },
+      "no_de_consultas_medicas_presencias_qt": 12000,
+      "no_de_consultas_medicas_nao_presenciais_ou_inespecificas_qt": 3000,
+      "no_de_consultas_medicas_ao_domicilio_qt": 400
+    },
+    {
+      "tempo": "2026-06",
+      "regiao": "Região de Saúde LVT",
+      "entidade": "Unidade Local de Saúde da Lezíria, EPE",
+      "ponto_ou_localizacao_geografica": { "lon": -8.715083, "lat": 39.232503 },
+      "no_de_consultas_medicas_presencias_qt": 8000,
+      "no_de_consultas_medicas_nao_presenciais_ou_inespecificas_qt": 1500,
+      "no_de_consultas_medicas_ao_domicilio_qt": 200
+    },
+    {
+      "tempo": "2026-07",
+      "regiao": "Região de Saúde do Norte",
+      "entidade": "ACES Grande Porto I - Santo Tirso/Trofa",
+      "ponto_ou_localizacao_geografica": { "lon": -8.47, "lat": 41.34 },
+      "no_de_consultas_medicas_presencias_qt": 5000,
+      "no_de_consultas_medicas_nao_presenciais_ou_inespecificas_qt": 900,
+      "no_de_consultas_medicas_ao_domicilio_qt": 80
+    }
+  ],
+  "rh": [
+    {
+      "periodo": "2026-05",
+      "regiao": "Região de Saúde LVT",
+      "instituicao": "Unidade Local de Saúde da Lezíria, EPE",
+      "localizacao_geografica": { "lon": -8.715083, "lat": 39.232503 },
+      "medicos_s_internos": 200,
+      "medicos_internos": 50,
+      "enfermeiros": 800,
+      "tss": 40,
+      "farmaceuticos": 20,
+      "farmaceuticos_residentes": 5,
+      "tdt": 90,
+      "at": 120,
+      "ao": 300,
+      "tas": 80,
+      "ao0": 220,
+      "ts": 30,
+      "informaticos": 10,
+      "outros": 40,
+      "total_geral": 2005
+    },
+    {
+      "periodo": "2015-01",
+      "regiao": "Serviços Centrais",
+      "instituicao": "Ação Governativa",
+      "localizacao_geografica": { "lon": -9.1463126, "lat": 38.7362218 },
+      "medicos_s_internos": 0,
+      "medicos_internos": 0,
+      "enfermeiros": 0,
+      "tss": 0,
+      "farmaceuticos": null,
+      "farmaceuticos_residentes": null,
+      "tdt": 0,
+      "at": 6,
+      "ao": 6,
+      "tas": null,
+      "ao0": null,
+      "ts": null,
+      "informaticos": null,
+      "outros": 30,
+      "total_geral": 42
+    },
+    {
+      "periodo": "2026-07",
+      "regiao": "Região de Saúde do Centro",
+      "instituicao": "Centro Hospitalar Tondela-Viseu, EPE",
+      "localizacao_geografica": { "lon": -8.0827433, "lat": 40.516364 },
+      "medicos_s_internos": 150,
+      "medicos_internos": 40,
+      "enfermeiros": 600,
+      "tss": 25,
+      "farmaceuticos": 12,
+      "farmaceuticos_residentes": 2,
+      "tdt": 70,
+      "at": 90,
+      "ao": 250,
+      "tas": 40,
+      "ao0": 210,
+      "ts": 20,
+      "informaticos": 8,
+      "outros": 25,
+      "total_geral": 1542
+    }
+  ]
+}
