@@ -42,8 +42,21 @@ export async function fetchCatalog(datasetId, fetchImpl = fetch) {
   return fetchJson(`${ODS_BASE}/catalog/datasets/${datasetId}`, fetchImpl)
 }
 
+const ODSQL_IDENT = /^[A-Za-z_][A-Za-z0-9_]*$/
+
+/** ODSQL select= requires backticks for names that are not plain identifiers (e.g. start with a digit). */
+export function quoteSelectField(name) {
+  const field = String(name)
+  if (ODSQL_IDENT.test(field)) return field
+  return `\`${field.replaceAll('`', '``')}\``
+}
+
+export function buildSelectClause(fields) {
+  return fields.map(quoteSelectField).join(',')
+}
+
 export async function fetchExport(datasetId, fields, fetchImpl = fetch) {
-  const select = encodeURIComponent(fields.join(','))
+  const select = encodeURIComponent(buildSelectClause(fields))
   const url = `${ODS_BASE}/catalog/datasets/${datasetId}/exports/json?select=${select}`
   const res = await fetchImpl(url, {
     headers: HEADERS,

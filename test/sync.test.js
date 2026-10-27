@@ -3,8 +3,8 @@ import assert from 'node:assert/strict'
 import { readFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { DATASETS_BY_KEY } from '../src/datasets.js'
-import { shouldSkip, shouldDeleteStale, fetchDatasetUpdate } from '../src/sync.js'
+import { DATASETS_BY_KEY, selectFields } from '../src/datasets.js'
+import { shouldSkip, shouldDeleteStale, fetchDatasetUpdate, quoteSelectField, buildSelectClause } from '../src/sync.js'
 
 const catalog = JSON.parse(
   readFileSync(join(dirname(fileURLToPath(import.meta.url)), 'fixtures/catalog.json'), 'utf8')
@@ -77,6 +77,28 @@ describe('shouldDeleteStale (sanity guard)', () => {
   })
 })
 
+describe('quoteSelectField', () => {
+  it('leaves plain identifiers unquoted', () => {
+    assert.equal(quoteSelectField('tempo'), 'tempo')
+    assert.equal(quoteSelectField('no_primeiras_ce_prestadas_dentro_do_tmrg'), 'no_primeiras_ce_prestadas_dentro_do_tmrg')
+    assert.equal(quoteSelectField('_private'), '_private')
+  })
+
+  it('backtick-quotes fields that start with a digit', () => {
+    assert.equal(
+      quoteSelectField('1as_consultas_realizadas_em_tempo_adequado'),
+      '`1as_consultas_realizadas_em_tempo_adequado`'
+    )
+  })
+
+  it('quotes consultas_tmrg select so ODSQL accepts 1as_consultas…', () => {
+    const clause = buildSelectClause(selectFields(DATASETS_BY_KEY.consultas_tmrg))
+    assert.match(clause, /`1as_consultas_realizadas_em_tempo_adequado`/)
+    assert.equal(clause.includes('`tempo`'), false)
+    assert.match(clause, /(^|,)tempo(,|$)/)
+  })
+})
+
 describe('fetchDatasetUpdate skip-when-unchanged', () => {
   it('does not call the export when data_processed is unchanged', async () => {
     const ds = DATASETS_BY_KEY.urgencias_triagem
@@ -109,5 +131,18 @@ describe('fetchDatasetUpdate skip-when-unchanged', () => {
     assert.equal(result.rows.length, 3)
     assert.equal(fetchImpl.calls.length, 2)
     assert.equal(fetchImpl.calls.some(u => u.includes('/exports/json')), true)
+  })
+
+  it('sends backtick-quoted 1as_consultas field on consultas-em-tempo-real export', async () => {
+    const ds = DATASETS_BY_KEY.consultas_tmrg
+    const fetchImpl = mockFetch({
+      '/catalog/datasets/consultas-em-tempo-real': catalog,
+      '/exports/json': raw.consultas_tmrg
+    })
+    await fetchDatasetUpdate(ds, { fetchImpl, dataProcessed: '2020-01-01T00:00:00.000000+00:00' })
+    const exportUrl = fetchImpl.calls.find(u => u.includes('/exports/json'))
+    assert.ok(exportUrl)
+    const select = new URL(exportUrl).searchParams.get('select')
+    assert.match(select, /`1as_consultas_realizadas_em_tempo_adequado`/)
   })
 })
