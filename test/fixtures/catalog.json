@@ -1,0 +1,13 @@
+{
+  "dataset_id": "atendimentos-em-urgencia-triagem-manchester",
+  "metas": {
+    "default": {
+      "title": "Atendimentos em Urgência Hospitalar por Triagem de Manchester",
+      "description": "Monitorização do número de atendimentos em urgência hospitalar, com base na Triagem de Manchester.",
+      "license": null,
+      "publisher": "DE-SNS",
+      "data_processed": "2026-10-23T10:46:58.289000+00:00",
+      "records_count": 6460
+    }
+  }
+}
